@@ -18,7 +18,7 @@ const HTTP_PORT = 80;
 const HTTPS_PORT = 443;
 const HTTP_MEDIAROOT = './media';
 const Logger = require('./core/node_core_logger');
-const context = require('./node_core_ctx');
+const context = require('./core/node_core_ctx');
 
 const streamsRoute = require('../api/routes/streams');
 const serverRoute = require('../api/routes/server');
@@ -75,12 +75,12 @@ class NodeHttpServer {
      * ~ openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.pem
      */
     if (this.config.https) {
-      let options = {
-        key: Fs.readFileSync(this.config.https.key),
-        cert: Fs.readFileSync(this.config.https.cert)
-      };
-      this.sport = config.https.port ? config.https.port : HTTPS_PORT;
-      this.httpsServer = Https.createServer(options, app);
+      // let options = {
+      //   key: Fs.readFileSync(this.config.https.key),
+      //   cert: Fs.readFileSync(this.config.https.cert)
+      // };
+      // this.sport = config.https.port ? config.https.port : HTTPS_PORT;
+      // this.httpsServer = Https.createServer(options, app);
     }
   }
 

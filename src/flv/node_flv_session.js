@@ -6,8 +6,8 @@
 const URL = require("url");
 const AMF = require("../core/node_core_amf");
 const Logger = require("../core/node_core_logger");
-const context = require("./node_core_ctx");
-const NodeCoreUtils = require("./node_core_utils");
+const context = require("../core/node_core_ctx");
+const NodeCoreUtils = require("../core/node_core_utils");
 
 const FlvPacket = {
   create: (payload = null, type = 0, time = 0) => {

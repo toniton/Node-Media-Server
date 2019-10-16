@@ -1,4 +1,4 @@
-const NodeMediaServer = require('./src');
+const { NodeMediaServer } = require('./src');
 
 const config = {
   rtmp: {
