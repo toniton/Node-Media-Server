@@ -1,5 +1,5 @@
 {
-  "name": "node-media-server",
+  "name": "media-server",
   "version": "0.0.1",
   "description": "A Node.js implementation of RTMP Server",
   "main": "src/index.js",
@@ -38,5 +38,8 @@
   },
   "engines": {
     "node": ">=8.0.0"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
