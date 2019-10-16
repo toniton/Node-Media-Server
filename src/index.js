@@ -3,6 +3,10 @@ const NodeTransServer = require('./trans/node_trans_server');
 const NodeRelayServer = require('./relay/node_relay_server');
 const NodeMediaServer = require('./node_media_server');
 
+const updateNotifier = require('update-notifier');
+const pkg = require('../package.json');
+updateNotifier({pkg}).notify();
+
 module.exports = {
     NodeMediaServer,
     NodeRtmpServer,

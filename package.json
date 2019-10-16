@@ -24,9 +24,10 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "dateformat": "^3.0.3",
+    "lodash": ">=4.17.15",
     "mkdirp": "^0.5.1",
-    "ws": "^5.2.2",
-    "lodash": ">=4.17.15"
+    "update-notifier": "^3.0.1",
+    "ws": "^5.2.2"
   },
   "peerDependencies": {
     "basic-auth-connect": "~1.0",
