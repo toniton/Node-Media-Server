@@ -5,7 +5,7 @@
 //
 const Logger = require('../core/node_core_logger');
 
-const NodeTransSession = require('./node_trans_session');
+const NodeTransSession = require('./node-trans-session');
 const context = require('../core/node_core_ctx');
 const { getFFmpegVersion, getFFmpegUrl } = require('../core/node_core_utils');
 const fs = require('fs');
