@@ -30,11 +30,9 @@
     "ws": "^5.2.2"
   },
   "peerDependencies": {
-    "basic-auth-connect": "~1.0",
     "express": "~4.16.4"
   },
   "devDependencies": {
-    "basic-auth-connect": "~1.0",
     "express": "~4.16.4"
   },
   "engines": {

@@ -12,7 +12,6 @@ const Https = require('https');
 const WebSocket = require('ws');
 const Express = require('express');
 const bodyParser = require('body-parser');
-const basicAuth = require('basic-auth-connect');
 const NodeFlvSession = require('../flv/node_flv_session');
 const HTTP_PORT = 80;
 const HTTPS_PORT = 443;
