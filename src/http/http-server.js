@@ -13,17 +13,12 @@ const WebSocket = require('ws');
 const Express = require('express');
 const bodyParser = require('body-parser');
 const basicAuth = require('basic-auth-connect');
-const NodeFlvSession = require('./flv/node_flv_session');
+const NodeFlvSession = require('../flv/node_flv_session');
 const HTTP_PORT = 80;
 const HTTPS_PORT = 443;
 const HTTP_MEDIAROOT = './media';
-const Logger = require('./core/node_core_logger');
-const context = require('./core/node_core_ctx');
-
-const streamsRoute = require('../api/routes/streams');
-const serverRoute = require('../api/routes/server');
-const relayRoute = require('../api/routes/relay');
-
+const Logger = require('../core/node_core_logger');
+const context = require('../core/node_core_ctx');
 
 const NodeHttpServer = (config) => {
   const port = config.http.port || HTTP_PORT;
@@ -37,8 +32,6 @@ const NodeHttpServer = (config) => {
     res.header("Access-Control-Allow-Credentials", true);
     req.method === "OPTIONS" ? res.sendStatus(200) : next();
   });
-
-  app.use('/api/relay', relayRoute(context));
   app.use(Express.static(this.mediaroot));
 
   if (config.http.webroot) {
