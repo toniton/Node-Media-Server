@@ -78,6 +78,7 @@ const NodeHttpServer = (config) => {
     this.wsServer.on('listening', () => {
       Logger.log(`Node Media WebSocket Server started on port: ${port}`);
     });
+    
     this.wsServer.on('error', (e) => {
       Logger.error(`Node Media WebSocket Server ${e}`);
     });
